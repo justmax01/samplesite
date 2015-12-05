@@ -1,0 +1,331 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*:::::::::::::::::::::::::::::::::::;;::::::::::::*/
+body{
+	background-image: url(../img/back-g.jpg);
+	background-size:100%;
+}
+.mainsect{
+	width: 1280px;
+	margin:0 auto;
+}
+header{
+	
+	margin-top:20px;
+	height: 80px;
+	background: #EEEEEE;
+}
+.menu-button{
+	float: left;
+	position:relative;
+	top:20px;
+	height: 30px;
+	width: 35px;
+	text-align: center;
+}
+.menu-button img{
+	height: auto;
+	width: 100%;
+}
+.logo{
+	float: left;
+	position: relative;
+	left: 100px;
+	top:8px;
+	height: 80px;
+	width: 120px;
+}
+.logo a{
+	width: 100%;
+	height: auto;
+}
+.search{
+	position: relative;
+	left: 200px;
+	top: 20px;
+	float: left;
+	width: 200px;
+	height: 30px;
+}
+.search input[type="search"]{
+	width: 500px;
+	height: 40px;
+}
+.search input[placeholder]{
+	font-size: 20px;
+}
+.search-button{
+	border:none;
+	position: relative;
+	left: 500px;
+	top:20px;
+	width: 50px;
+	height: 40px;
+	background-color:#4285F4;
+}
+.search-button:active{
+	background-color:#3366CC;
+}
+.search-button img{
+	width: 60%;
+	height: auto;
+}
+.img-container{
+	position: relative;
+	left:110px;
+
+}
+.img-cont{
+	width: 40px;
+	height: 40px;
+	float: left;
+	position: relative;
+	left: 850px;
+	bottom: 20px;
+	margin-right:20px;
+}
+.img-cont img{
+	width: 100%;
+	height: auto;
+}
+.place{
+	padding: 30px;
+	height: 30px;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	
+}
+.place p{
+	margin-top:5px;
+	font: 42px Century Gothic;
+	color: white;
+	
+}
+.daily-weather{
+	width: 50%;
+	height: 250px;
+	float: left;
+}
+.daily-w-d{
+	height: 35px;
+	width: 100%;
+}
+.daily-w-d h1{
+	padding: 6px;
+	font: 30px Trebuchet MS;
+	text-align: center;
+	color: white;
+}
+.daily-w-img{	
+	text-align: center;
+	margin-top:20px;
+	width: 50%;
+	height: 180px;
+	float: left;
+}
+.daily-w-img img{
+	width: auto;
+	height: 100%;
+}
+.daily-temp{
+	width: 50%;
+	height: 70px;
+	float: left;
+}
+.daily-temp p{
+	font: 50px Trebuchet MS;
+	color: white;
+	text-align: center;
+	padding: 20px;
+}
+.feelings{
+width: 50%;
+height: 30px;
+float: left;
+text-align: center;
+}
+.feelings p{
+	font: 24px Trebuchet MS;
+	color: white;
+}
+.weather-param{
+	width: 50%;
+	height: 100px;
+	float: left;
+	text-align: center;
+}
+.weather-param li{
+	font: 18px Trebuchet MS;
+	line-height: 28px;
+	color: white;
+}
+.weather-param ul{
+	margin-top:24px;
+}
+.part.one{
+	width: 100%;
+	height: 250px;
+}
+.day-weather{
+	width: 50%;
+	height: 250px;
+	float: left;
+}
+.d-time{
+	width: 33%;
+	height: 250px;
+	float: left;
+	/* transition: transform 0.2s; */
+}
+.d-time:hover{
+	transform: scale(1.1);
+}
+.day-time{
+	width: 100%;
+	height: 35px;
+	text-align: center;
+	float: left;
+	margin-bottom: 10px;
+}
+.day-time p{
+	font: 30px Trebuchet MS;
+	color: white;
+	padding: 6px;
+}
+.d-w-img{
+	width: 100%;
+	height: 80px;
+	float: left;
+	text-align: center;
+}
+.d-w-img img{
+	width: auto;
+	height: 100%;
+}
+.d-w-temperature{
+	width: 100%;
+	height: 60px;
+	text-align: center;
+	float: left;
+}
+.d-w-temperature p{
+	font:50px Trebuchet MS;
+	color: white;
+	margin-top:20px;
+
+}
+.part-two{
+	margin-top:30px;
+	width: 100%;
+	height: 400px;
+	float: left;
+}
+.week-w{
+	width: 100%;
+	height: 50px;
+	text-align: center;
+}
+.week-w p{
+	font: 42px Century Gothic;
+	color:white;
+}
+.week-day{
+	margin-top:50px;
+	width: 16.5%;
+	height: 310px;
+	float: left;
+}
+.week-day:hover{
+	transform: scale(1.1);
+}
+.d-mane{
+	width: 100%;
+	height: 90px;
+	text-align: center;
+	float: left;
+
+}
+.d-mane p{
+	font: 32px Trebuchet MS;
+	color: white;
+}
+.d-ico{
+	width: 100%;
+	height: 100px;
+	text-align: center;
+	float: left;
+}
+.d-ico img{
+	height: 100%;
+	width: auto;
+}
+.day-temp{
+	width: 100%;
+	height: 45px;
+	text-align: center;
+	float: left;
+	padding: 10px;
+}
+.day-temp p{
+	font:32px Trebuchet MS;
+	color: white;
+
+}
+.night-temp{
+	width: 100%;
+	height: 45px;
+	text-align: center;
+	float: left;
+	padding: 10px;
+}
+.night-temp p{
+	font:32px Trebuchet MS;
+	color: white;
+}
