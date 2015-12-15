@@ -15,7 +15,10 @@
 			<img src="img/logo.png">
 		</div>
 		<div class="search">
-			<input type="search" placeholder="Enter the name of the city">
+		<form id="formCity">
+            <label for="cityName">Enter city name:</label>
+            <input id="inputCityName" type="text" name="cityName"/>
+            <input type="button" id="btnGetWeather" value="Get Weather"/>
    		</div>
    		<button class="search-button">
    			<img src="img/search.svg">
@@ -39,7 +42,7 @@
 </header>
 <section class="mainsect">
 	<div class="place">
-		<p>Lviv,Ukraine</p>
+	<p>City: <span id="location" ></span></p>
 	</div>
 	<hr>
 	<section class="part-one">
@@ -216,7 +219,10 @@
 
 	</section>
 </section>
-
+ 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="scripts/moment-with-locales.js"></script>
+        <script src="scripts/weather-by-city.js"></script>
+        <script src="scripts/index.js"></script>
 	
 </body>
 </html>
