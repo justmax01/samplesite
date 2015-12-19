@@ -60,6 +60,7 @@ header{
 	margin-top:20px;
 	height: 80px;
 	background: #EEEEEE;
+
 }
 .menu-button{
 	float: left;
@@ -148,6 +149,21 @@ header{
 	color: white;
 	
 }
+#part-one{
+	width: 100%;
+	height: 280px;
+}
+#icon-current-time{
+	margin-top:20px;
+	width:70%;
+	height:200px;
+	float:left;
+}
+#icon-current-time img {
+	width:auto;
+	height:100%;
+	margin-left:100px;
+}	
 .daily-weather{
 	width: 50%;
 	height: 250px;
@@ -155,67 +171,42 @@ header{
 }
 .daily-w-d{
 	height: 35px;
-	width: 100%;
+	width: 70%;
 }
 .daily-w-d h1{
-	padding: 6px;
-	font: 30px Trebuchet MS;
+	font: 32px Trebuchet MS;
 	text-align: center;
 	color: white;
-}
-.daily-w-img{	
-	text-align: center;
-	margin-top:20px;
-	width: 50%;
-	height: 180px;
-	float: left;
-}
-.daily-w-img img{
-	width: auto;
-	height: 100%;
 }
 .daily-temp{
-	width: 50%;
-	height: 70px;
+	width: 30%;
+	height: 110px;
 	float: left;
+	margin-top:-40px;
 }
 .daily-temp p{
-	font: 50px Trebuchet MS;
+	font: 100px Trebuchet MS;
 	color: white;
-	text-align: center;
-	padding: 20px;
-}
-.feelings{
-width: 50%;
-height: 30px;
-float: left;
-text-align: center;
-}
-.feelings p{
-	font: 24px Trebuchet MS;
-	color: white;
+	text-align: left;
 }
 .weather-param{
-	width: 50%;
-	height: 100px;
+	margin-top:25px;
+	width: 30%;
+	height: 150px;
 	float: left;
-	text-align: center;
 }
 .weather-param li{
-	font: 18px Trebuchet MS;
-	line-height: 28px;
+	font: 25px Trebuchet MS;
+	margin-top:5px;
 	color: white;
+	text-align:left;
 }
 .weather-param ul{
-	margin-top:24px;
-}
-.part.one{
-	width: 100%;
-	height: 250px;
+	margin-top:15px;
 }
 .day-weather{
 	width: 50%;
-	height: 250px;
+	height: 285px;
 	float: left;
 }
 .d-time{
@@ -229,15 +220,18 @@ text-align: center;
 }
 .day-time{
 	width: 100%;
-	height: 35px;
+	height: 50px;
 	text-align: center;
 	float: left;
-	margin-bottom: 10px;
 }
 .day-time p{
+	margin-top:50px;
+	font: 40px Trebuchet MS;
+	color: white;
+}
+.day-time h1{
 	font: 30px Trebuchet MS;
 	color: white;
-	padding: 6px;
 }
 .d-w-img{
 	width: 100%;
@@ -251,81 +245,51 @@ text-align: center;
 }
 .d-w-temperature{
 	width: 100%;
-	height: 60px;
+	height: 80px;
 	text-align: center;
 	float: left;
 }
 .d-w-temperature p{
-	font:50px Trebuchet MS;
+	font:70px Trebuchet MS;
 	color: white;
-	margin-top:20px;
+	margin-top:80px;
 
 }
-.part-two{
+#weather-container{
 	margin-top:30px;
 	width: 100%;
 	height: 400px;
-	float: left;
 }
-.week-w{
-	width: 100%;
-	height: 50px;
-	text-align: center;
+#weather-container .week-day-weather{
+	width:16%;
+	float:left;
+	height:300px;
+	margin-left:8px;
+	text-align:center;
 }
-.week-w p{
-	font: 42px Century Gothic;
+.week-day-weather{
 	color:white;
-}
-.week-day{
-	margin-top:50px;
-	width: 16.5%;
-	height: 310px;
-	float: left;
-}
-.week-day:hover{
-	transform: scale(1.1);
-}
-.d-mane{
-	width: 100%;
-	height: 90px;
-	text-align: center;
-	float: left;
-
-}
-.d-mane p{
 	font: 32px Trebuchet MS;
-	color: white;
+    opacity: 0.9;
 }
-.d-ico{
-	width: 100%;
-	height: 100px;
-	text-align: center;
-	float: left;
+.week-day-weather:hover{
+transform: scale(1.1);
+ opacity: 1;
+ border-left:1px solid white;
+  border-right:1px solid white;
 }
-.d-ico img{
-	height: 100%;
-	width: auto;
+#iconWeek{
+	width:100%;
+	height:100px;
 }
-.day-temp{
-	width: 100%;
-	height: 45px;
-	text-align: center;
-	float: left;
-	padding: 10px;
+#iconWeek img{
+	width:50%;
+	height:auto;
 }
-.day-temp p{
-	font:32px Trebuchet MS;
-	color: white;
-
+.day-temperature{
+	font-size:32px;
+	margin-top:20px;
 }
-.night-temp{
-	width: 100%;
-	height: 45px;
-	text-align: center;
-	float: left;
-	padding: 10px;
-}
-.night-temp p{
-	font:32px Trebuchet MS;
-	color: white;
+#main-week{
+	font-size:32px;
 }

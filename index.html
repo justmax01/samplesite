@@ -17,13 +17,9 @@
 		<div class="search">
 		<form id="formCity">
             <label for="cityName">Enter city name:</label>
-            <input id="inputCityName" type="text" name="cityName"/>
-            <input type="button" id="btnGetWeather" value="Get Weather"/>
+            <input id="cityName" type="text" name="cityName"/>
+            <input type="button" id="btnGetWeather16" value="Get Weather"/>
    		</div>
-   		<button class="search-button">
-   			<img src="img/search.svg">
-   		</button>
-
 		<div class="geo">
 			<a href="#"><img src=""></a>
 		</div>
@@ -42,182 +38,61 @@
 </header>
 <section class="mainsect">
 	<div class="place">
-	<p>City: <span id="location" ></span></p>
+	<p id="your-loc"></p>
 	</div>
 	<hr>
-	<section class="part-one">
+	<section id="part-one">
 		<div class="daily-weather" >
 			<div class="daily-w-d">
-				<h1> Partly cloudly</h1>
+				<h1 id=descr-current></h1>
 			</div>
-			<div class="daily-w-img">
-				<img src="img/cloudly.svg" alt="cloudly">
+			<div id="icon-current-time">
 			</div>
 			<div class="daily-temp">
-				<p>1&#176;C</p>
-			</div>
-			<div class="feelings">
-				<p>Feels like 2&#176;C</p>
+				<p id="current-temperature"></p>
 			</div>
 			<div class="weather-param">
 				<ul>
-					<li>Pressure......751 mmHg</li>
-					<li>Wind........Eastern 1m/s</li>
-					<li>Presipitation..........78%</li>
+					<li id="humidity-day"></li>
+					<li id="wind-day"></li>
+					<li id="min-temperature"></li>
+					<li id="max-temperature"></li>
 				</ul>
 			</div>
 		</div>
 		<div class="day-weather">
 			<div class="d-time">
 				<div class="day-time">
-					<p>Evening</p>
-				</div>
-				<div class="day-time">
-					<p>Cloudy</p>
-				</div>
-				<div class="d-w-img">
-					<img src="img/cloud-sun.svg" alt="cloudly">
+					<h1>Afternoon</h1>
 				</div>
 				<div class="d-w-temperature">
-					<p>1&#176;C</p>
+					<p id="afternoon"</p>
 				</div>
 			</div>	
 			<div class="d-time">
 				<div class="day-time">
-					<p>Night</p>
-				</div>
-				<div class="day-time">
-					<p>Mostly cloudly</p>
-				</div>
-				<div class="d-w-img">
-					<img src="img/cloudly.svg" alt="cloudly">
+					<h1>Evening</h1>
 				</div>
 				<div class="d-w-temperature">
-					<p>-1&#176;C</p>
+					<p id="evening"></p>
 				</div>
 			</div>
 			<div class="d-time">
 				<div class="day-time">
-					<p>Morning</p>
-				</div>
-				<div class="day-time">
-					<p>Little rain</p>
-				</div>
-				<div class="d-w-img">
-					<img src="img/little-rain.svg" alt="little-rain">
+					<h1>Night</h1>
 				</div>
 				<div class="d-w-temperature">
-					<p>0&#176;C</p>
+					<p id="night"></p>
 				</div>
 			</div>	
 			
 			
 		</div>
 	</section>
-
-	<section class="part-two">
 	<hr>
-		<div class="week-w">
-			<p>Week weather</p>
-		</div>
-		<div class="week-day">
-			<div class="d-mane">
-				<p>Sun</p>
-				<p>01</p>
-			</div>
-			<hr>
-			<div class="d-ico">
-				<img src="img/cloud.svg" alt="cloud">
-			</div>
-			<div class="day-temp">
-				<p>6&#176;C</p>
-			</div>
-			<div class="night-temp">
-				<p>3&#176;C</p>
-			</div>
-		</div>
-		<div class="week-day">
-			<div class="d-mane">
-				<p>Mon</p>
-				<p>02</p>
-			</div>
-			<hr>
-			<div class="d-ico">
-				<img src="img/cloud-sun.svg" alt="cloud-sun">
-			</div>
-			<div class="day-temp">
-				<p>8&#176;C</p>
-			</div>
-			<div class="night-temp">
-				<p>4&#176;C</p>
-			</div>
-		</div>
-		<div class="week-day">
-			<div class="d-mane">
-				<p>Tue</p>
-				<p>03</p>
-			</div>
-			<hr>
-			<div class="d-ico">
-				<img src="img/sunny.svg" alt="sunny">
-			</div>
-			<div class="day-temp">
-				<p>12&#176;C</p>
-			</div>
-			<div class="night-temp">
-				<p>8&#176;C</p>
-			</div>
-		</div>
-		<div class="week-day">
-			<div class="d-mane">
-				<p>Wed</p>
-				<p>04</p>
-			</div>
-			<hr>
-			<div class="d-ico">
-				<img src="img/cloud-sun.svg" alt="cloud">
-			</div>
-			<div class="day-temp">
-				<p>9&#176;C</p>
-			</div>
-			<div class="night-temp">
-				<p>4&#176;C</p>
-			</div>
-		</div>
-		<div class="week-day">
-			<div class="d-mane">
-				<p>Thu</p>
-				<p>05</p>
-			</div>
-			<hr>
-			<div class="d-ico">
-				<img src="img/little-rain.svg" alt="little-rain">
-			</div>
-			<div class="day-temp">
-				<p>7&#176;C</p>
-			</div>
-			<div class="night-temp">
-				<p>3&#176;C</p>
-			</div>
-		</div>
-		<div class="week-day">
-			<div class="d-mane">
-				<p>Fri</p>
-				<p>06</p>
-			</div>
-			<hr>
-			<div class="d-ico">
-				<img src="img/rain.svg" alt="rain">
-			</div>
-			<div class="day-temp">
-				<p>6&#176;C</p>
-			</div>
-			<div class="night-temp">
-				<p>1&#176;C</p>
-			</div>
-		</div>
+	<section id="weather-container">
 
-	</section>
+	</section>	
 </section>
  		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="scripts/moment-with-locales.js"></script>
