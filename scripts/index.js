@@ -1,17 +1,6 @@
-
-$(function() {
-    navigator.geolocation.getCurrentPosition(locationSuccess, locationError);
-});
-
-function locationSuccess(position)
-{
-    var weatherAPI = 'http://api.openweathermap.org/data/2.5/forecast?lat='+position.coords.latitude+
-    '&lon='+position.coords.longitude+'&APPID=b5eb1f7fc74c772602241ba72db33987&callback=?';
-    
- $.get("http://ipinfo.io", function (response) {
+$.get("http://ipinfo.io", function (response) {
     $("#address").html(response.city);
 }, "jsonp");
-
 $(function(){
     //Setting lang for moment.js
     moment.locale('en');
@@ -28,14 +17,13 @@ $(function(){
             return false;
         }
     });
-    
   function dataReceived(data) {
         // Calc time difference from UTC, confert from min to milliseconds
         var offset = (new Date()).getTimezoneOffset()*60*1000; 
         var city = data.city.name;
         var country = data.city.country;
         var icon = data.list[0].weather[0].icon ;
-        $('#icon-current-time').html('<img src="/img/'+ icon +'.svg" alt="' + data.list[0].weather[0].description + '" >');
+        $('#icon-current-time').html('<img src="img/'+ icon +'.svg" alt="' + data.list[0].weather[0].description + '" >');
         $('#current-temperature').html(Math.round(data.list[0].temp.morn) + '&deg;C');
         $('#descr-current').html(data.list[0].weather[0].description);
         $('#min-temperature').html('Min temp:' + '&nbsp;' + '&nbsp;' + Math.round(data.list[0].temp.min) + '&deg;C');
@@ -88,4 +76,3 @@ $(function(){
     
 
 })
-
