@@ -1,13 +1,5 @@
-$(document).ready(function() {
-    
-    $.getJSON("http://ipinfo.io", function(data){
-function getWeatherByCity(lang, fnOK, fnError, city) 
-    });
-    
-}
 
-
-  $(function(){
+     $(function(){
     //Setting lang for moment.js
     moment.locale('en');
     // Adding handler for inputCityName button
