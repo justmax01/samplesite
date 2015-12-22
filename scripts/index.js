@@ -1,20 +1,17 @@
-/*function readyFn( jQuery ) {
-$.getJSON('http://ipinfo.io', function(data){
-    function getWeatherByCity(lang, fnOK, fnError, city) {
-        $.getJSON(
-            'http://api.openweathermap.org/data/2.5/forecast/daily?q=' 
-            + city + '&APPID=4d801b1b726cc89fc5ffa7af543e9190&cnt=7&units=metric' + '&lang=' + lang + '&callback=?',
-            function (data) {
-                fnOK.call(this, data);
-            }
-        );
-    }
-}, "jsonp");
-}*/ //пошук по місцезнаходженню
 
-$.get("http://ipinfo.io", function (response) {
+$(function() {
+    navigator.geolocation.getCurrentPosition(locationSuccess, locationError);
+});
+
+function locationSuccess(position)
+{
+    var weatherAPI = 'http://api.openweathermap.org/data/2.5/forecast?lat='+position.coords.latitude+
+    '&lon='+position.coords.longitude+'&APPID=b5eb1f7fc74c772602241ba72db33987&callback=?';
+    
+ $.get("http://ipinfo.io", function (response) {
     $("#address").html(response.city);
 }, "jsonp");
+
 $(function(){
     //Setting lang for moment.js
     moment.locale('en');
@@ -31,6 +28,7 @@ $(function(){
             return false;
         }
     });
+    
   function dataReceived(data) {
         // Calc time difference from UTC, confert from min to milliseconds
         var offset = (new Date()).getTimezoneOffset()*60*1000; 
@@ -90,3 +88,4 @@ $(function(){
     
 
 })
+
