@@ -1,21 +1,33 @@
+$(document).ready(function() {
+    
+    $.getJSON("http://ipinfo.io", function(data){
+function getWeatherByCity(lang, fnOK, fnError, city) 
+    });
+    
+}
 
-$(document).ready(function () {
-    function getWeatherByCity(lang, fnOK, fnError, cityName) {
-        $.getJSON(
-            'http://api.openweathermap.org/data/2.5/forecast/daily?q=' 
-            + cityName + '&APPID=4d801b1b726cc89fc5ffa7af543e9190&cnt=7&units=metric' + '&lang=' + lang + '&callback=?',
-            function (data) {
-                fnOK.call(this, data);
-            }
-           
-        );
-    }
-    var functionOk = function (data) {
-        console.log(data);
-        
-        //Connected elements: images, air temperature, max temperature, 
-        //min temperature, main, speed wind, humidity to the data that 
-        //came from the site 'OpenWeatherMap'  on current day!
+
+  $(function(){
+    //Setting lang for moment.js
+    moment.locale('en');
+    // Adding handler for inputCityName button
+    $('#btnGetWeather').click(function () {
+        getWeatherByCity('en', dataReceived, showError, $('#inputCityName').val());
+    });
+    // Adding handler for 'Enter' key on keyboard
+    $('#inputCityName').keypress(function(e) {
+        var ENTER_KEY_CODE = 13;
+        if ( e.which === ENTER_KEY_CODE ) 
+        {
+            $('#btnGetWeather').trigger('click');
+            return false;
+        }
+    });
+  function dataReceived(data) {
+        // Calc time difference from UTC, confert from min to milliseconds
+        var offset = (new Date()).getTimezoneOffset()*60*1000; 
+        var city = data.city.name;
+        var country = data.city.country;
         var icon = data.list[0].weather[0].icon ;
         $('#icon-current-time').html('<img src="/img/'+ icon +'.svg" alt="' + data.list[0].weather[0].description + '" >');
         $('#current-temperature').html(Math.round(data.list[0].temp.morn) + '&deg;C');
@@ -24,7 +36,7 @@ $(document).ready(function () {
         $('#max-temperature').html('Max temp:' + '&nbsp;' + '&nbsp;' + Math.round(data.list[0].temp.max) + '&deg;C');
         $('#humidity-day').html('Humidity:'+ '&nbsp;' + '&nbsp;' + data.list[0].humidity + '%');
         $('#wind-day').html('Windy:' + '&nbsp;' + '&nbsp;' + data.list[0].speed + '&nbsp;' + 'm/s');
-
+        $('#location').html(city + ', <b>' + country + '</b>');
         //Connected elements: air temperature, description for the current day afternoon!
         $('#afternoon').html(Math.round(data.list[0].temp.day) + '&deg;C');
         //Connected elements: air temperature, description for the current day evening!
@@ -61,11 +73,12 @@ $(document).ready(function () {
 
         return days[numberOfDay];
     }
+   function showError(msg){
+        $('#error').html('An error occured: ' + msg);
+    }
+   
 
-    var functionError = function (msg) {
-        $('#error').html('An error has occurred: ' + msg);
-    };
+ 
     
-    getWeatherByCity('eng', functionOk, functionError, 'Lviv');
-    
+
 })

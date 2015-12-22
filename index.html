@@ -6,94 +6,100 @@
 	<link rel="stylesheet" type="text/css" href="./style/index.css">
 </head>
 <body>
-<header>
-	<div class="mainsect">
-		<div class="menu-button">
-			<a href="#"><img src="img/menu.svg"></a>
-		</div>
-		<div class="logo">
-			<img src="img/logo.png">
-		</div>
-		<div class="search">
-		<form id="formCity">
-            <label for="cityName">Enter city name:</label>
-            <input id="cityName" type="text" name="cityName"/>
-            <input type="button" id="btnGetWeather16" value="Get Weather"/>
-   		</div>
-		<div class="geo">
-			<a href="#"><img src=""></a>
-		</div>
-		<div class="img-container">
-			<div class="img-cont">
-				<a href="#"><img src="img/facebook.png" alt="facebook"></a>
+	<header>
+		<div class="mainsect">
+			<div class="logo">
+				<img src="img/logo.png">
 			</div>
-			<div class="img-cont">
-				<a href="#"><img src="img/twitter-blog.png" alt="facebook"></a>
-			</div>
-			<div class="img-cont">
-				<a href="#"><img src="img/google.png" alt="facebook"></a>
+			<div class="search">
+			<form id="formCity">
+	            <label for="cityName"></label>
+	            <input id="inputCityName" type="text" name="cityName" placeholder="Type city name"/>
+	            <input type="button" id="btnGetWeather" value="Get Weather"/>
+	   		</div>
+			<div <class="current-location">
+				<div class="geoloc-img">
+					<img src="/img/geoloc.png" />
+				</div>
+				<p id=address></p>
 			</div>
 		</div>
-	</div>
-</header>
-<section class="mainsect">
-	<div class="place">
-	<p id="your-loc"></p>
-	</div>
-	<hr>
-	<section id="part-one">
-		<div class="daily-weather" >
-			<div class="daily-w-d">
-				<h1 id=descr-current></h1>
-			</div>
-			<div id="icon-current-time">
-			</div>
-			<div class="daily-temp">
-				<p id="current-temperature"></p>
-			</div>
-			<div class="weather-param">
-				<ul>
-					<li id="humidity-day"></li>
-					<li id="wind-day"></li>
-					<li id="min-temperature"></li>
-					<li id="max-temperature"></li>
-				</ul>
-			</div>
+	</header>
+	<section class="mainsect">
+		<div class="place">
+			<p>City: <span id="location" ></span></p>
 		</div>
-		<div class="day-weather">
-			<div class="d-time">
-				<div class="day-time">
-					<h1>Afternoon</h1>
+		<hr>
+		<section id="current-weather">
+			<div class="daily-weather" >
+				<div class="daily-w-d">
+					<h1 id=descr-current></h1>
 				</div>
-				<div class="d-w-temperature">
-					<p id="afternoon"</p>
+				<div id="icon-current-time">
 				</div>
-			</div>	
-			<div class="d-time">
-				<div class="day-time">
-					<h1>Evening</h1>
+				<div class="daily-temp">
+					<p id="current-temperature"></p>
 				</div>
-				<div class="d-w-temperature">
-					<p id="evening"></p>
+				<div class="weather-param">
+					<ul>
+						<li id="humidity-day"></li>
+						<li id="wind-day"></li>
+						<li id="min-temperature"></li>
+						<li id="max-temperature"></li>
+					</ul>
 				</div>
 			</div>
-			<div class="d-time">
-				<div class="day-time">
-					<h1>Night</h1>
+			<div class="day-weather">
+				<div class="day-time-cont">
+					<div class="day-time">
+						<h1>Afternoon</h1>
+					</div>
+					<div class="d-w-temperature">
+						<p id="afternoon"</p>
+					</div>
+				</div>	
+				<div class="day-time-cont">
+					<div class="day-time">
+						<h1>Evening</h1>
+					</div>
+					<div class="d-w-temperature">
+						<p id="evening"></p>
+					</div>
 				</div>
-				<div class="d-w-temperature">
-					<p id="night"></p>
-				</div>
-			</div>	
-			
-			
-		</div>
-	</section>
-	<hr>
-	<section id="weather-container">
-
+				<div class="day-time-cont">
+					<div class="day-time">
+						<h1>Night</h1>
+					</div>
+					<div class="d-w-temperature">
+						<p id="night"></p>
+					</div>
+				</div>	
+			</div>
+		</section>
+		<hr>
+		<section id="weather-container">
+		</section>
 	</section>	
-</section>
+		<footer class="fullsect">
+			<div class="mainsect">
+				<div class=about-us>
+						<p>
+							
+						</p>
+				<div>
+				<div class="img-container">
+					<div class="img-cont">
+						<a href="#"><img src="img/facebook.png" alt="facebook"></a>
+					</div>
+					<div class="img-cont">
+						<a href="#"><img src="img/twitter-blog.png" alt="facebook"></a>
+					</div>
+					<div class="img-cont">
+						<a href="#"><img src="img/google.png" alt="facebook"></a>
+					</div>
+				</div>
+			</div>
+		</footer>
  		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="scripts/moment-with-locales.js"></script>
         <script src="scripts/weather-by-city.js"></script>
