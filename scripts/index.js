@@ -1,5 +1,21 @@
+/*function readyFn( jQuery ) {
+$.getJSON('http://ipinfo.io', function(data){
+    function getWeatherByCity(lang, fnOK, fnError, city) {
+        $.getJSON(
+            'http://api.openweathermap.org/data/2.5/forecast/daily?q=' 
+            + city + '&APPID=4d801b1b726cc89fc5ffa7af543e9190&cnt=7&units=metric' + '&lang=' + lang + '&callback=?',
+            function (data) {
+                fnOK.call(this, data);
+            }
+        );
+    }
+}, "jsonp");
+}*/ //пошук по місцезнаходженню
 
-     $(function(){
+$.get("http://ipinfo.io", function (response) {
+    $("#address").html(response.city);
+}, "jsonp");
+$(function(){
     //Setting lang for moment.js
     moment.locale('en');
     // Adding handler for inputCityName button
